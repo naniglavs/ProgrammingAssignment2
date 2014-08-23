@@ -23,9 +23,8 @@ makeCacheMatrix <- function(x = matrix()) {
   # This function gets the inverse of the matrix
   getinverse <- function() inv
   
-  # Return the list with the set, get, setinve
-  rse, getinverse functions that are to be used by cacheSolve
-  # function
+  # Return the list with the set, get, setinverse,
+  # getinverse functions that are to be used by cacheSolve function
   list(set = set, get = get,
        setinverse = setinverse,
        getinverse = getinverse)
@@ -54,7 +53,7 @@ cacheSolve <- function(x, ...) {
   
   # Calculate the inverse of the matrix (assuming matrix is convertible)
   inv <- solve(data, ...)
-    message("calculating the inverse")
+  message("calculating the inverse")
   
   # Set the inverse
   x$setinverse(inv)
